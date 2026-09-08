@@ -1,0 +1,126 @@
+/* Restored source-site content, with roomier editorial typography. */
+.home-restored { padding:clamp(64px,7vw,112px) clamp(22px,5vw,84px); scroll-margin-top:100px; }
+.home-restored h2 { margin:0 0 26px; font-family:var(--font-geist-sans),Arial,sans-serif; font-size:clamp(34px,4.1vw,66px); font-weight:800; line-height:1.16; letter-spacing:-.045em; text-wrap:balance; }
+.home-restored h3 { font-family:var(--font-geist-sans),Arial,sans-serif; line-height:1.3; letter-spacing:-.025em; }
+.home-restored p { max-width:650px; font-size:16px; line-height:1.8; }
+.home-restored .shop-kicker { margin:0 0 22px; font-size:10px; line-height:1.6; font-weight:800; letter-spacing:.14em; }
+.home-restored a { text-underline-offset:6px; }
+.home-restored a:hover { text-decoration:underline; }
+.home-restored :is(a,button,input):focus-visible,.home-service-highlights a:focus-visible { outline:3px solid var(--blue); outline-offset:5px; }
+.restored-heading { display:flex; align-items:flex-end; justify-content:space-between; gap:30px; margin-bottom:44px; }
+.restored-heading h2 { margin-bottom:0; }
+.restored-heading>a { flex-shrink:0; padding:14px 0; border-bottom:1px solid currentColor; font-size:13px; font-weight:750; }
+.home-welcome { display:grid; grid-template-columns:1.05fr 1fr; gap:clamp(35px,8vw,140px); background:var(--white); }
+.home-welcome>div:last-child { align-self:center; color:#50534f; }
+.home-welcome .welcome-promise { color:var(--blue); font-size:18px; font-weight:700; line-height:1.7; margin-bottom:0; }
+.welcome-links { display:flex; flex-wrap:wrap; gap:16px 28px; margin-top:30px; color:var(--ink); font-size:13px; font-weight:750; }
+.welcome-links a { padding:10px 0; border-bottom:1px solid var(--line); }
+.home-service-highlights { margin:46px 0 0; }
+.service-highlight-heading { display:flex; align-items:center; justify-content:space-between; gap:24px; padding-bottom:20px; }
+.service-highlight-heading p { margin:0; font-size:12px; font-weight:800; letter-spacing:.06em; text-transform:uppercase; }
+.service-highlight-heading a { padding:10px 0; font-size:13px; font-weight:750; border-bottom:1px solid var(--ink); }
+.home-service-highlights .service-highlight-cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border:1px solid var(--line); }
+.home-service-highlights .service-highlight-cards>a { display:flex; flex-direction:column; padding:32px; border-right:1px solid var(--line); transition:background .2s; }
+.home-service-highlights .service-highlight-cards>a:last-child { border-right:0; }
+.home-service-highlights .service-highlight-cards>a:hover { background:var(--white); }
+.home-service-highlights h3 { margin:0 0 14px; font-size:27px; line-height:1.3; }
+.home-service-highlights p { font-size:14px; line-height:1.8; color:#515550; }
+.home-service-highlights span { margin-top:auto; padding-top:24px; font-size:12px; font-weight:750; }
+.home-gallery { background:var(--white); }
+.home-gallery-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px; }
+.home-gallery-grid button { padding:0; border:0; background:transparent; cursor:pointer; text-align:left; }
+.home-gallery-grid img { width:100%; height:auto; aspect-ratio:3/4; object-fit:cover; transition:filter .25s; }
+.home-gallery-grid button:hover img { filter:contrast(1.08); }
+.home-gallery-grid button>span { display:flex; align-items:center; gap:12px; padding:18px 0; font-size:12px; line-height:1.6; font-weight:650; border-bottom:1px solid var(--line); }
+.home-gallery-grid b { color:var(--blue); font-size:10px; }
+.home-gallery-grid i { margin-left:auto; font-style:normal; }
+.home-gallery-dialog { width:min(1100px,94vw); max-height:94dvh; padding:18px; border:0; background:var(--ink); color:white; }
+.home-gallery-dialog>div,.home-gallery-dialog>nav { display:flex; justify-content:space-between; align-items:center; gap:16px; font-size:12px; }
+.home-gallery-dialog>img { width:100%; max-height:72dvh; height:auto; object-fit:contain; margin:14px 0; }
+.home-gallery-dialog button { min-height:44px; padding:10px 16px; border:1px solid #ffffff55; background:transparent; cursor:pointer; }
+.home-gallery-dialog::backdrop { background:#08090ded; }
+.home-warranty { display:grid; grid-template-columns:1fr 1fr; align-items:center; gap:70px; background:var(--blue); color:white; }
+.warranty-number { display:flex; flex-direction:column; padding:20px 0; border-top:1px solid #ffffff55; border-bottom:1px solid #ffffff55; }
+.warranty-number strong { font-size:clamp(60px,10vw,155px); line-height:1.25; letter-spacing:-.06em; }
+.warranty-number span { font-size:clamp(20px,3vw,42px); letter-spacing:.02em; line-height:1.5; }
+.home-warranty p:not(.shop-kicker) { color:#ffffffe0; }
+.home-warranty a,.home-finance>div>a,.home-areas a { display:inline-block; margin-top:16px; padding-bottom:10px; border-bottom:1px solid currentColor; font-size:13px; font-weight:750; }
+.home-finance { display:grid; grid-template-columns:1fr 1fr; gap:65px; background:var(--paper); }
+.home-finance-options { display:grid; grid-template-columns:1fr 1fr; gap:16px; align-content:center; }
+.home-finance-options>a { display:flex; flex-direction:column; min-height:290px; padding:30px 24px; background:var(--white); border-top:4px solid var(--blue); }
+.home-finance-options>a:last-child { border-color:var(--yellow); }
+.home-finance-options span { font-size:9px; font-weight:750; letter-spacing:.09em; line-height:1.6; }
+.home-finance-options h3 { margin:35px 0; font-size:clamp(24px,2.6vw,39px); }
+.home-finance-options b { margin-top:auto; font-size:12px; }
+.home-reviews { background:var(--ink); color:var(--white); }
+.home-reviews .shop-kicker { color:var(--yellow); }
+.home-review-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); border-top:1px solid #ffffff33; }
+.home-review-grid article { display:flex; flex-direction:column; padding:35px 32px; border-right:1px solid #ffffff33; }
+.home-review-grid article:first-child { padding-left:0; }
+.home-review-grid article:last-child { padding-right:0; border:0; }
+.home-review-grid article>span { color:#bbbdb8; font-size:10px; letter-spacing:.12em; }
+.home-review-grid blockquote { margin:30px 0; font-size:clamp(18px,1.7vw,25px); line-height:1.7; letter-spacing:-.025em; }
+.home-review-grid strong { margin-top:auto; color:var(--yellow); font-size:13px; }
+.home-areas { display:grid; grid-template-columns:1fr 1fr; gap:70px; background:#e6e8df; }
+.home-areas address { margin:28px 0 0; font-size:18px; font-style:normal; line-height:1.7; }
+.home-area-list { display:grid; grid-template-columns:1fr 1fr; gap:0 28px; align-content:center; }
+.home-area-list>div { display:flex; align-items:center; gap:18px; padding:20px 0; border-bottom:1px solid #0b0d1230; font-size:15px; font-weight:650; }
+.home-area-list span { color:#545c4f; font-size:10px; }
+.home-blog { background:var(--white); }
+.home-blog-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:28px; }
+.home-blog-grid>a { display:flex; flex-direction:column; }
+.home-blog-image { position:relative; overflow:hidden; }
+.home-blog-image img { width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; transition:transform .3s; }
+.home-blog-grid>a:hover img { transform:scale(1.035); }
+.home-blog-image span { position:absolute; left:14px; bottom:14px; padding:8px 12px; background:var(--paper); font-size:10px; font-weight:750; }
+.home-blog-grid time { display:block; margin:24px 0 10px; color:#5d615c; font-size:11px; }
+.home-blog-grid h3 { margin:8px 0 12px; font-size:clamp(23px,2.3vw,34px); }
+.home-blog-grid p { margin:0 0 25px; color:#595d56; font-size:14px; }
+.home-blog-grid b { margin-top:auto; padding-top:20px; border-top:1px solid var(--line); font-size:12px; }
+.home-newsletter { display:grid; grid-template-columns:1fr 1fr; gap:70px; align-items:center; background:var(--yellow); }
+.home-newsletter h2 { font-size:clamp(30px,3.2vw,49px); }
+.home-newsletter p { margin-bottom:0; }
+.home-newsletter form { min-width:0; }
+.home-newsletter label { display:block; margin-bottom:12px; font-size:12px; font-weight:750; }
+.home-newsletter form>div { display:flex; border-bottom:2px solid var(--ink); }
+.home-newsletter input { min-width:0; width:100%; padding:18px 0; font-size:17px; border:0; background:transparent; border-radius:0; color:var(--ink); }
+.home-newsletter input::placeholder { color:#575125; }
+.home-newsletter button { flex-shrink:0; padding:12px 22px; border:0; background:var(--ink); color:white; font-size:12px; font-weight:750; cursor:pointer; }
+.home-newsletter form>p { min-height:40px; font-size:11px; line-height:1.7; }
+.utility-bar { grid-template-columns:1fr auto auto auto; }
+.utility-invoice { padding-left:20px; border-left:1px solid #ffffff40; }
+.footer-column a { overflow-wrap:anywhere; }
+.journal-directory time { display:block; margin-top:18px; color:#62675e; font-size:11px; }
+@media(max-width:1050px) {
+ .home-welcome,.home-finance,.home-areas,.home-newsletter { gap:38px; }
+ .home-finance { grid-template-columns:1fr; }
+ .home-gallery-grid { grid-template-columns:1fr 1fr; }
+ .home-gallery-grid img { aspect-ratio:3/2; }
+ .home-warranty { gap:35px; }
+ .home-review-grid article { padding:30px 20px; }
+ .utility-bar { grid-template-columns:1fr auto auto; }
+ .utility-bar p:nth-child(2) { display:none; }
+}
+@media(max-width:700px) {
+ .home-welcome,.home-warranty,.home-areas,.home-newsletter { grid-template-columns:1fr; }
+ .restored-heading { align-items:flex-start; flex-direction:column; gap:18px; margin-bottom:30px; }
+ .home-service-highlights .service-highlight-cards,.home-review-grid,.home-blog-grid { grid-template-columns:1fr; }
+ .home-service-highlights .service-highlight-cards>a { padding:28px 22px; border-right:0; border-bottom:1px solid var(--line); }
+ .home-service-highlights .service-highlight-cards>a:last-child { border-bottom:0; }
+ .service-highlight-heading { align-items:flex-start; flex-direction:column; gap:12px; }
+ .home-gallery-grid { gap:24px 14px; }
+ .home-gallery-grid button>span { align-items:flex-start; font-size:11px; gap:8px; }
+ .home-gallery-grid img { aspect-ratio:4/5; }
+ .home-warranty .warranty-number strong { font-size:clamp(68px,18vw,120px); }
+ .home-review-grid article,.home-review-grid article:first-child,.home-review-grid article:last-child { padding:30px 0; border-right:0; border-bottom:1px solid #ffffff33; }
+ .home-review-grid blockquote { font-size:23px; }
+ .home-area-list { gap:0 18px; }
+ .home-area-list>div { font-size:13px; gap:10px; }
+ .home-blog-grid { gap:42px; }
+ .home-blog-grid h3 { font-size:28px; }
+ .home-finance-options>a { padding:24px 16px; min-height:260px; }
+ .home-newsletter button { padding:12px 14px; }
+ .home-newsletter input { font-size:16px; }
+ .utility-bar { grid-template-columns:1fr auto; gap:10px; }
+ .utility-invoice { display:none; }
+}

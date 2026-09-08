@@ -1,0 +1,10 @@
+node_modules
+.next
+.vinext
+.wrangler
+.openai
+dist
+outputs
+work
+*.tsbuildinfo
+.env*

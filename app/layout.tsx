@@ -1,6 +1,12 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import './shop/shop.css';
+import './site/site.css';
+import './site/home-sections.css';
+import './site/mobile.css';
+import './site/mobile-content.css';
+import { CartProvider } from './shop/cart';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -12,18 +18,24 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+export const viewport: Viewport = { width: 'device-width', initialScale: 1, viewportFit: 'cover' };
+
+const deploymentHost = process.env.VERCEL_ENV === 'production'
+  ? process.env.VERCEL_PROJECT_PRODUCTION_URL || process.env.VERCEL_URL
+  : process.env.VERCEL_URL;
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://carrolls-garage-heritage-store.shipiologistics.chatgpt.site'),
-  title: "Carroll's Garage | Sumner, WA",
-  description: "Garage-built goods inspired by nearly a century of honest work at Carroll's Garage in Sumner, Washington.",
+  metadataBase: new URL(deploymentHost ? `https://${deploymentHost}` : 'http://localhost:3000'),
+  title: "Carroll's Garage | Auto Repair & Garage Goods in Sumner, WA",
+  description: "Family-owned auto repair in Sumner, Washington, with ASE-certified technicians, digital inspections, diesel service, maintenance, and Carroll's Garage merchandise.",
   icons: { icon: '/favicon.png' },
   openGraph: {
-    title: "Carroll's Garage | Built in Sumner Since the 1930s",
-    description: "Garage-built goods inspired by nearly a century of honest work.",
+    title: "Carroll's Garage | Straight Answers. Solid Repairs.",
+    description: "Family-owned auto repair and garage goods from Sumner, Washington.",
     type: 'website',
-    url: 'https://carrolls-garage-heritage-store.shipiologistics.chatgpt.site',
+    url: '/',
     images: [{
-      url: 'https://carrolls-garage-heritage-store.shipiologistics.chatgpt.site/og.png',
+      url: '/og.png',
       width: 1200,
       height: 630,
       alt: "Carroll's Garage heritage storefront",
@@ -31,9 +43,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Carroll's Garage | Built in Sumner Since the 1930s",
-    description: "Garage-built goods inspired by nearly a century of honest work.",
-    images: ['https://carrolls-garage-heritage-store.shipiologistics.chatgpt.site/og.png'],
+    title: "Carroll's Garage | Straight Answers. Solid Repairs.",
+    description: "Family-owned auto repair and garage goods from Sumner, Washington.",
+    images: ['/og.png'],
   },
 };
 
@@ -47,7 +59,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <CartProvider>{children}</CartProvider>
       </body>
     </html>
   );
