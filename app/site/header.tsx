@@ -25,7 +25,7 @@ export default function SiteHeader() {
   },[]);
 
   return <>
-    <div className="utility-bar"><p><span>●</span> Family owned · Sumner, WA</p><p>16602 64th St. E. · Sumner, WA</p><a href="tel:+12538632524"><span className="utility-call-label">Call the shop · </span>(253) 863-2524</a><Link className="utility-invoice" href="/pay-invoice">Pay invoice ↗</Link></div>
+    <div className="utility-bar"><p><span>●</span> Family owned · Sumner, WA</p><p>16602 64th St. E. · Sumner, WA</p><a href="tel:+12538632524"><span className="utility-call-label">Call the garage · </span>(253) 863-2524</a><Link className="utility-invoice" href="/pay-invoice">Pay invoice ↗</Link></div>
     <header className="site-header global-header">
       <Link className="brand" href="/" aria-label="Carroll’s Garage home"><Image src="/carrolls-wordmark-transparent.png" width={170} height={62} alt="Carroll’s Garage" priority /></Link>
       <nav aria-label="Primary navigation">{links.map(([href,label])=><Link key={href} href={href} aria-current={current(href)?'page':undefined}>{label}</Link>)}</nav>
@@ -45,6 +45,6 @@ export default function SiteHeader() {
         <p>16602 64th St. E. · Sumner, WA</p>
       </div>
     </dialog>
-    {!pathname.startsWith('/products/')&&<nav className="mobile-action-dock" aria-label="Quick actions"><a href="tel:+12538632524">Call the shop</a><Link className="dock-book" href="/appointment">Book service ↗</Link>{pathname==='/shop'?<button type="button" onClick={open}>Your bag ({count})</button>:<Link href="/shop">Shop merch</Link>}</nav>}
+    {!pathname.startsWith('/products/')&&<nav className="mobile-action-dock" aria-label="Quick actions"><a href="tel:+12538632524">Call the garage</a><Link className="dock-book" href="/appointment">Book service ↗</Link>{pathname==='/shop'?<button type="button" onClick={open}>Your bag ({count})</button>:<Link href="/shop">Shop merch</Link>}</nav>}
   </>;
 }

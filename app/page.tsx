@@ -38,7 +38,7 @@ const services: Array<{
     short: "No guesswork. Just answers.",
     description: "We use detailed testing and digital vehicle inspections to find the real cause of warning lights, strange sounds, and drivability issues.",
     includes: ["Check-engine lights", "Digital inspection", "Computer programming"],
-    image: "/garage-team.webp",
+    image: "/carrolls-exterior-night.png",
     accent: "01",
   },
   {
@@ -47,7 +47,7 @@ const services: Array<{
     short: "Built for the hard-working rigs.",
     description: "Specialized light- and medium-duty diesel repair for Power Stroke, Cummins, and Duramax engines—from injectors and turbos to emissions systems.",
     includes: ["Power Stroke", "Cummins", "Duramax"],
-    image: "/hero-garage-mustang.png",
+    image: "/carrolls-blue-racecar.png",
     accent: "02",
   },
   {
@@ -56,7 +56,7 @@ const services: Array<{
     short: "Confident stops start here.",
     description: "From squeaks and pulsation to ABS warning lights, we inspect and repair pads, rotors, calipers, hydraulics, and anti-lock systems.",
     includes: ["Brake repair", "ABS diagnosis", "Hydraulic systems"],
-    image: "/garage-service.webp",
+    image: "/carrolls-yellow-racecar.png",
     accent: "03",
   },
   {
@@ -65,7 +65,7 @@ const services: Array<{
     short: "Stay ahead of the expensive stuff.",
     description: "Oil changes, cooling systems, fluids, filters, belts, and factory-scheduled maintenance that keep your vehicle dependable mile after mile.",
     includes: ["Oil changes", "Cooling systems", "Scheduled service"],
-    image: "/garage-oil.webp",
+    image: "/carrolls-family-owned.png",
     accent: "04",
   },
   {
@@ -74,7 +74,7 @@ const services: Array<{
     short: "Start strong. Stay comfortable.",
     description: "We track down electrical faults and service batteries, alternators, starters, climate control, sensors, and modern driver-assistance systems.",
     includes: ["Battery & charging", "AC & heat", "ADAS systems"],
-    image: "/garage-battery.webp",
+    image: "/carrolls-black-racecar.png",
     accent: "05",
   },
   {
@@ -83,7 +83,7 @@ const services: Array<{
     short: "Keep business moving.",
     description: "Consistent maintenance, dependable repairs, and practical scheduling for local businesses that cannot afford unnecessary downtime.",
     includes: ["Preventive plans", "Fast turnaround", "Light & medium duty"],
-    image: "/garage-team.webp",
+    image: "/carrolls-family-racecar.png",
     accent: "06",
   },
 ];
@@ -115,7 +115,7 @@ const shopPromises = [
 ];
 
 const process = [
-  ["01", "Schedule", "Request an appointment online or call the shop to arrange a convenient visit."],
+  ["01", "Schedule", "Request an appointment online or call the garage to arrange a convenient visit."],
   ["02", "Inspect", "A digital vehicle inspection documents our findings with clear photos and notes."],
   ["03", "Approve", "Review your digital estimate and approve the work before any repairs begin."],
   ["04", "Repair", "Our ASE-certified technicians complete the approved repairs using quality parts."],
@@ -169,7 +169,7 @@ export default function Home() {
       </nav>
 
       <section className="hero" id="top">
-        <img className="hero-image" src="/hero-garage-mustang.png" alt="Classic Mustang inside Carroll's Garage" />
+        <img className="hero-image" src="/carrolls-exterior-night.png" alt="Carroll's Garage exterior at night in Sumner, Washington" />
         <div className="hero-shade" />
         <div className="hero-minimal-copy">
           <p>Family-owned auto repair · Sumner, WA</p>
@@ -259,8 +259,8 @@ export default function Home() {
 
       <section className="convenience-section">
         <div className="convenience-photo">
-          <img src="/garage-service.webp" alt="Technician servicing a customer vehicle" />
-          <div className="photo-label"><span>Built around your day</span><strong>THE SHOP VISIT,<br />WITHOUT THE RUNAROUND.</strong></div>
+          <img src="/carrolls-family-owned.png" alt="Carroll family and friends gathered around classic cars" />
+          <div className="photo-label"><span>Family-owned in Sumner</span><strong>THE GARAGE VISIT,<br />WITHOUT THE RUNAROUND.</strong></div>
         </div>
         <div className="convenience-copy">
           <p className="eyebrow"><span /> What sets us apart</p>
@@ -301,7 +301,7 @@ export default function Home() {
         <div className="booking-copy">
           <p className="eyebrow"><span /> Need service?</p>
           <h2>LET&apos;S GET YOU<br />BACK ON THE ROAD.</h2>
-          <p>Tell us what your vehicle is doing. This form is a design preview; call or email the shop to arrange a confirmed visit.</p>
+          <p>Tell us what your vehicle is doing. This form is a design preview; call or email the garage to arrange a confirmed visit.</p>
           <a href="tel:+12538632524">Prefer to call? <strong>(253) 863-2524</strong></a>
         </div>
         <MobileReveal label="Start an appointment request" className="booking-form-reveal">
@@ -312,7 +312,7 @@ export default function Home() {
           <label><span>What can we help with?</span><select defaultValue=""><option value="" disabled>Select a service</option>{services.map((service) => <option value={service.key} key={service.key}>{service.name}</option>)}</select></label>
           <label className="form-wide"><span>What are you noticing?</span><textarea rows={3} placeholder="Tell us what is happening" /></label>
           <button className="form-wide" type="submit">{requestSent ? "Preview complete ✓" : "Preview appointment request →"}</button>
-          <small className="form-wide" role="status">{requestSent ? "Preview complete. No appointment request was sent; call the shop to book." : "Design preview only—this form does not send customer information yet."}</small>
+          <small className="form-wide" role="status">{requestSent ? "Preview complete. No appointment request was sent; call the garage to book." : "Design preview only—this form does not send customer information yet."}</small>
         </form>
         </MobileReveal>
       </section>
