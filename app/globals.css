@@ -157,7 +157,6 @@ main { width: 100%; overflow: hidden; }
 .process-grid { display: grid; grid-template-columns: repeat(6, 1fr); border-top: 1px solid rgba(255,255,255,.22); border-bottom: 1px solid rgba(255,255,255,.22); }
 .process-grid article { min-height: 290px; display: flex; flex-direction: column; padding: 24px 20px; border-right: 1px solid rgba(255,255,255,.18); }
 .process-grid article:last-child { border-right: 0; }
-.process-grid > article > span { color: var(--yellow); font-size: 11px; font-weight: 900; }
 .process-grid article div { margin-top: auto; }
 .process-grid h3 { margin: 0 0 10px; font-family: Impact, sans-serif; font-size: clamp(28px, 2.5vw, 42px); text-transform: uppercase; }
 .process-grid p { margin: 0; color: rgba(255,255,255,.5); font-size: 12px; line-height: 1.55; }

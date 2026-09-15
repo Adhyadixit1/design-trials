@@ -275,7 +275,7 @@ export default function Home() {
       <section className="process-section">
         <div className="section-heading compact"><p className="eyebrow light"><span /> What to expect</p><h2>SIX SIMPLE STEPS.<br /><em>ZERO SURPRISES.</em></h2></div>
         <MobileRail className="process-grid" label="repair process" dark>
-          {process.map(([number, title, copy]) => <article key={number}><span>{number}</span><div><h3>{title}</h3><p>{copy}</p></div></article>)}
+          {process.map(([, title, copy]) => <article key={title}><div><h3>{title}</h3><p>{copy}</p></div></article>)}
         </MobileRail>
       </section>
 
