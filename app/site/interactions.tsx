@@ -43,5 +43,5 @@ const benefits = [
 ];
 
 export function GarageBenefits() {
-  return <div className="garage-benefits">{benefits.map(([title,copy],i)=><details key={title} name="garage-benefits" open={i===0}><summary><span>0{i+1}</span><h3>{title}</h3><b aria-hidden="true"/></summary><p>{copy}</p></details>)}</div>;
+  return <div className="garage-benefits">{benefits.map(([title,copy],i)=><details key={title} name="garage-benefits" open={i===0}><summary><h3>{title}</h3><b aria-hidden="true"/></summary><p>{copy}</p></details>)}</div>;
 }

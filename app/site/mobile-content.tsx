@@ -59,9 +59,9 @@ export function MobileRail({ children, className, label, dark = false }: {
     {count > 1 && <div className="mobile-rail-controls">
       <div className="rail-caption"><span>Swipe to explore</span><span role="status" aria-live="polite">{active + 1} / {count}</span></div>
       <div className="rail-navigation">
-        <button type="button" aria-label={`Previous ${label}`} aria-controls={trackId} disabled={active === 0} onClick={() => go(active - 1)}>←</button>
+        <button type="button" aria-label={`Previous ${label}`} aria-controls={trackId} disabled={active === 0} onClick={() => go(active - 1)}>Prev</button>
         {count <= 4 ? <div className="rail-dots">{items.map((_, index) => <button key={index} type="button" aria-label={`Show ${label} ${index + 1} of ${count}`} aria-current={index === active ? 'true' : undefined} aria-controls={trackId} onClick={() => go(index)}><span/></button>)}</div> : <span className="rail-step-label">One step at a time</span>}
-        <button type="button" aria-label={`Next ${label}`} aria-controls={trackId} disabled={active >= count - 1} onClick={() => go(active + 1)}>→</button>
+        <button type="button" aria-label={`Next ${label}`} aria-controls={trackId} disabled={active >= count - 1} onClick={() => go(active + 1)}>Next</button>
       </div>
     </div>}
   </div>;

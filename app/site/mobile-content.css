@@ -32,7 +32,7 @@
  .mobile-rail-shell .mobile-rail-controls { display:block; padding-top:10px; }
  .rail-caption { display:flex; align-items:center; justify-content:space-between; gap:12px; font-size:.75rem; line-height:1.5; color:#62685d; }
  .rail-navigation { display:grid; grid-template-columns:44px minmax(0,1fr) 44px; align-items:center; gap:8px; margin-top:4px; }
- .rail-navigation>button { min-height:44px; min-width:44px; border:1px solid var(--line); background:transparent; cursor:pointer; font-size:20px; }
+ .rail-navigation>button { min-height:44px; min-width:44px; border:1px solid var(--line); background:transparent; cursor:pointer; font-size:.75rem; font-weight:750; }
  .rail-navigation>button:disabled { opacity:.35; cursor:default; }
  .rail-dots { display:flex; justify-content:center; min-width:0; }
  .rail-dots button { width:44px; min-width:30px; height:44px; padding:0; display:grid; place-items:center; border:0; background:transparent; cursor:pointer; }
@@ -109,12 +109,11 @@
  .area-disclosure { margin-top:22px; }
  .area-disclosure .area-chips { margin-top:0; }
  .interior-split .mobile-reveal-content p { margin-top:0; }
- .service-directory>a { position:relative; padding:20px 48px 20px 18px; }
+ .service-directory>a { position:relative; padding:20px 18px; }
  .service-directory>a>span { margin-bottom:12px; }
  .service-directory>a h2 { font-size:1.25rem; margin:0; }
  .service-directory>a p { display:none; }
- .service-directory>a b { font-size:0; position:absolute; right:18px; top:50%; translate:0 -50%; }
- .service-directory>a b::after { content:'↗'; font-size:20px; }
+ .service-directory>a b { font-size:.875rem; position:static; margin-top:18px; translate:none; }
  .journal-directory>a { display:grid; grid-template-columns:95px minmax(0,1fr); align-items:start; }
  .journal-directory>a>img { height:110px; width:95px; aspect-ratio:auto; object-fit:cover; }
  .journal-directory a>div { padding:14px; }

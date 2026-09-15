@@ -196,7 +196,7 @@ main { width: 100%; overflow: hidden; }
 .booking-form > small { color: var(--muted); font-size: 10px; }
 
 footer { display: grid; grid-template-columns: 1.4fr .7fr .55fr .7fr; gap: clamp(35px, 5vw, 80px); padding: 78px clamp(26px, 5vw, 92px) 26px; background: var(--ink); color: white; }
-.footer-brand img { width: min(285px, 90%); filter: brightness(0) invert(1); }
+.footer-brand img { width: min(285px, 90%); }
 .footer-brand p { max-width: 390px; color: rgba(255,255,255,.5); font-size: 13px; line-height: 1.65; }
 .footer-column { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
 .footer-column p { margin: 0 0 10px; color: var(--yellow); font-size: 10px; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }

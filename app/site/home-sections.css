@@ -31,9 +31,7 @@
 .home-gallery-grid button { padding:0; border:0; background:transparent; cursor:pointer; text-align:left; }
 .home-gallery-grid img { width:100%; height:auto; aspect-ratio:3/4; object-fit:cover; transition:filter .25s; }
 .home-gallery-grid button:hover img { filter:contrast(1.08); }
-.home-gallery-grid button>span { display:flex; align-items:center; gap:12px; padding:18px 0; font-size:12px; line-height:1.6; font-weight:650; border-bottom:1px solid var(--line); }
-.home-gallery-grid b { color:var(--blue); font-size:10px; }
-.home-gallery-grid i { margin-left:auto; font-style:normal; }
+.home-gallery-grid button>span { display:block; padding:18px 0; font-size:12px; line-height:1.6; font-weight:650; border-bottom:1px solid var(--line); }
 .home-gallery-dialog { width:min(1100px,94vw); max-height:94dvh; padding:18px; border:0; background:var(--ink); color:white; }
 .home-gallery-dialog>div,.home-gallery-dialog>nav { display:flex; justify-content:space-between; align-items:center; gap:16px; font-size:12px; }
 .home-gallery-dialog>img { width:100%; max-height:72dvh; height:auto; object-fit:contain; margin:14px 0; }

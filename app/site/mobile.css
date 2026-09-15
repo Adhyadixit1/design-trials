@@ -9,7 +9,7 @@ button:disabled { cursor:not-allowed; }
 :is(h1,h2,h3) { overflow-wrap:break-word; }
 .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 summary { cursor:pointer; }
-.mobile-menu-toggle,.mobile-action-dock { display:none; }
+.mobile-menu-toggle { display:none; }
 .mobile-nav-dialog { position:fixed; inset:0 0 0 auto; margin:0; width:min(440px,100%); max-width:100%; height:100dvh; max-height:100dvh; border:0; padding:0; background:var(--paper); color:var(--ink); overscroll-behavior:contain; }
 .mobile-nav-dialog[open] { animation:menu-enter .2s ease-out; }
 .mobile-nav-inner { padding:22px 24px max(24px,env(safe-area-inset-bottom)); }
@@ -30,11 +30,10 @@ summary { cursor:pointer; }
 .garage-benefits details { border-bottom:1px solid var(--line); }
 .garage-benefits summary { display:flex; align-items:center; gap:16px; min-height:68px; padding:16px 0; list-style:none; }
 .garage-benefits summary::-webkit-details-marker { display:none; }
-.garage-benefits summary>span { color:var(--blue); font-size:.75rem; }
 .garage-benefits h3 { flex:1; margin:0; font-size:1.125rem; line-height:1.4; font-weight:700; }
 .garage-benefits summary>b::after { content:'+'; font-size:22px; font-weight:400; }
 .garage-benefits details[open] summary>b::after { content:'−'; }
-.garage-benefits p { padding:0 0 20px 32px; margin:0; font-size:1rem; line-height:1.7; color:#5c6157; }
+.garage-benefits p { padding:0 0 20px; margin:0; font-size:1rem; line-height:1.7; color:#5c6157; }
 .directory-reset { min-height:44px; padding:10px 14px; background:transparent; border:1px solid var(--line); font-size:.875rem; cursor:pointer; }
 .directory-results { margin:0 0 22px; font-size:.875rem; color:#5a6054; }
 .blog-topic-filters { display:flex; gap:10px; overflow:auto; padding:4px 4px 12px; margin:0 0 18px; }
@@ -61,11 +60,7 @@ summary { cursor:pointer; }
  .global-header { height:72px; gap:12px; padding-inline:var(--mobile-gutter); }
  .global-header .brand { width:140px; }
  .bag-button { min-height:46px; min-width:70px; font-size:.875rem; text-transform:none; letter-spacing:0; }
- .mobile-action-dock { position:fixed; z-index:29; bottom:0; left:0; right:0; display:grid; grid-template-columns:1fr 1.25fr 1fr; align-items:stretch; gap:6px; padding:9px var(--mobile-gutter) calc(9px + env(safe-area-inset-bottom)); background:#fffdf7f5; backdrop-filter:blur(12px); border-top:1px solid var(--line); box-shadow:0 -5px 20px #0b0d1208; }
- .mobile-action-dock :is(a,button) { display:flex; align-items:center; justify-content:center; text-align:center; min-height:46px; padding:8px 4px; font-size:.875rem; font-weight:700; line-height:1.4; border:0; background:transparent; }
- .mobile-action-dock .dock-book { background:var(--blue); color:#fff; }
- body:has(.mobile-action-dock) { padding-bottom:calc(70px + env(safe-area-inset-bottom)); }
- body:has(dialog[open]) :is(.mobile-action-dock,.pdp-sticky-cart),body:has(input:focus,textarea:focus,select:focus) :is(.mobile-action-dock,.pdp-sticky-cart) { visibility:hidden; pointer-events:none; }
+ body:has(dialog[open]) .pdp-sticky-cart,body:has(input:focus,textarea:focus,select:focus) .pdp-sticky-cart { visibility:hidden; pointer-events:none; }
  .utility-call-label { display:none; }
  .mobile-nav-dialog:focus-visible { outline:0; }
  .global-header>.header-actions { gap:8px; }
@@ -80,7 +75,7 @@ summary { cursor:pointer; }
  .service-tabs button,.service-tabs button:nth-child(even) { flex:0 0 auto; display:flex; min-height:48px; padding:12px 18px; border:1px solid var(--line); gap:10px; font-family:var(--font-geist-sans),Arial,sans-serif; font-size:.875rem; line-height:1.4; text-transform:none; font-weight:700; scroll-snap-align:center; }
  .service-tabs button:last-child { border-bottom:1px solid var(--line); }
  .service-tabs button b { display:none; }
- .service-tabs button span { font-size:.75rem; }
+ .service-tabs button span { display:none; }
  .service-feature { min-height:0; display:grid; }
  .service-feature>img { position:absolute; inset:0; height:100%; }
  .service-feature-copy { position:relative; left:auto; right:auto; bottom:auto; align-self:end; padding:140px 28px 30px; }
@@ -133,6 +128,7 @@ summary { cursor:pointer; }
  .service-feature-copy ul { margin:20px 0; }
  .service-feature-copy li { font-size:.75rem; line-height:1.5; text-transform:none; }
  .service-feature-copy a { font-size:.875rem; min-height:48px; letter-spacing:0; }
+ .service-feature-copy a b { display:none; }
  .service-marquee { margin-inline:calc(-1 * var(--mobile-gutter)); }
  .service-marquee div { font-size:1.25rem; padding-block:12px; }
  .home-service-highlights { margin-top:30px; }
@@ -161,7 +157,7 @@ summary { cursor:pointer; }
  .convenience-copy,.history-copy,.booking-copy,.booking-form { padding:var(--mobile-section) var(--mobile-gutter); }
  .garage-benefits summary { gap:12px; min-height:64px; }
  .garage-benefits h3 { font-size:1rem; }
- .garage-benefits p { padding-left:28px; }
+ .garage-benefits p { padding-left:0; }
  .process-grid { grid-template-columns:1fr 1fr; }
  .process-grid article { min-height:0; padding:24px 16px; gap:24px; }
  .process-grid article div { margin-top:0; }
@@ -190,7 +186,6 @@ summary { cursor:pointer; }
  .home-gallery-grid { gap:18px 12px; }
  .home-gallery-grid img { aspect-ratio:1; }
  .home-gallery-grid button>span { font-size:.75rem; padding-block:12px; }
- .home-gallery-grid button>span>b { display:none; }
  .home-warranty .warranty-number strong { font-size:clamp(3rem,15vw,5.5rem); }
  .warranty-number span { font-size:1.25rem; }
  .home-finance-options { gap:12px; }
@@ -351,7 +346,6 @@ summary { cursor:pointer; }
 @media(max-width:370px) {
  .global-header .brand { width:110px; }
  .utility-bar p:first-child span { display:none; }
- .mobile-action-dock :is(a,button) { font-size:.75rem; }
  .trust-strip,.process-grid { grid-template-columns:1fr; }
  .process-grid article { border-right:0!important; border-bottom:1px solid #ffffff26; }
  .home-finance-options { grid-template-columns:1fr; }
