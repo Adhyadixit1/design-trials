@@ -129,7 +129,7 @@ function ProductCard({ product }: { product: Product }) {
       <div className={`product-visual tone-${product.tone}`}>
         {product.badge && <span className="product-badge">{product.badge}</span>}
         <Link href={productHref(product.name)} aria-label={`Shop ${product.name}`}><img src={product.image} alt={product.name} /></Link>
-        <Link className="product-shop-link" href={productHref(product.name)}>Shop now <span>↗</span></Link>
+        <Link className="product-shop-link" href={productHref(product.name)}>Shop now</Link>
       </div>
       <div className="product-meta">
         <div><small>{product.category}</small><h3><Link href={productHref(product.name)}>{product.name}</Link></h3></div>
@@ -174,15 +174,15 @@ export default function Home() {
         <div className="hero-minimal-copy">
           <p>Family-owned auto repair · Sumner, WA</p>
           <h1>BUILT TO KEEP<br />YOU MOVING.</h1>
-          <a href="/appointment">Book service <span>↗</span></a>
+          <a href="/appointment">Book service</a>
         </div>
         <a className="hero-call" href="tel:+12538632524">(253) 863-2524</a>
       </section>
 
       <section className="trust-band" id="why-us" aria-label="Why choose Carroll’s Garage">
         <MobileRail className="trust-strip" label="garage benefits" dark>
-        {shopPromises.map(([number, title, copy]) => (
-          <article key={number}><span>{number}</span><h3>{title}</h3><p>{copy}</p></article>
+        {shopPromises.map(([, title, copy]) => (
+          <article key={title}><h3>{title}</h3><p>{copy}</p></article>
         ))}
         </MobileRail>
       </section>
@@ -218,7 +218,7 @@ export default function Home() {
                 }}
                 key={service.key}
               >
-                <span>{service.accent}</span>{service.name}<b>↗</b>
+                <span>{service.accent}</span>{service.name}
               </button>
             ))}
           </div>
@@ -230,7 +230,7 @@ export default function Home() {
               <h3>{selectedService.name}</h3>
               <span>{selectedService.description}</span>
               <ul>{selectedService.includes.map((item) => <li key={item}>{item}</li>)}</ul>
-              <Link href={`/services/${homeServiceSlugs[selectedService.key]}`}>Explore this service <b>↗</b></Link>
+              <Link href={`/services/${homeServiceSlugs[selectedService.key]}`}>Explore this service</Link>
             </div>
           </article>
         </div>
@@ -254,7 +254,7 @@ export default function Home() {
         <div className="product-grid">
           {filteredProducts.map((product) => <ProductCard product={product} key={product.name} />)}
         </div>
-        <div className="merch-footer"><p>Carroll’s originals, from the garage to your everyday.</p><Link href="/shop">View all merchandise →</Link></div>
+        <div className="merch-footer"><p>Carroll’s originals, from the garage to your everyday.</p><Link href="/shop">View all merchandise</Link></div>
       </section>
 
       <section className="convenience-section">
@@ -289,7 +289,7 @@ export default function Home() {
           <h2>A MODERN SHOP WITH OLD-SCHOOL ACCOUNTABILITY.</h2>
           <MobileReveal label="The story behind the shop"><p>Carroll&apos;s Garage is built around a simple idea: explain the work clearly, repair it properly, and treat every customer like a neighbor. The technology has moved forward. The standard stays personal.</p></MobileReveal>
           <blockquote>“We help people stay safe and confident on the road.”</blockquote>
-          <Link href="/about-us">Meet Carroll&apos;s Garage <span>↗</span></Link>
+          <Link href="/about-us">Meet Carroll&apos;s Garage</Link>
         </div>
       </section>
 
@@ -311,7 +311,7 @@ export default function Home() {
           <label><span>Vehicle</span><input placeholder="Year, make and model" /></label>
           <label><span>What can we help with?</span><select defaultValue=""><option value="" disabled>Select a service</option>{services.map((service) => <option value={service.key} key={service.key}>{service.name}</option>)}</select></label>
           <label className="form-wide"><span>What are you noticing?</span><textarea rows={3} placeholder="Tell us what is happening" /></label>
-          <button className="form-wide" type="submit">{requestSent ? "Preview complete ✓" : "Preview appointment request →"}</button>
+          <button className="form-wide" type="submit">{requestSent ? "Preview complete ✓" : "Preview appointment request"}</button>
           <small className="form-wide" role="status">{requestSent ? "Preview complete. No appointment request was sent; call the garage to book." : "Design preview only—this form does not send customer information yet."}</small>
         </form>
         </MobileReveal>

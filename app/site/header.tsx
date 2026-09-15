@@ -25,12 +25,12 @@ export default function SiteHeader() {
   },[]);
 
   return <>
-    <div className="utility-bar"><p><span>●</span> Family owned · Sumner, WA</p><p>16602 64th St. E. · Sumner, WA</p><a href="tel:+12538632524"><span className="utility-call-label">Call the garage · </span>(253) 863-2524</a><Link className="utility-invoice" href="/pay-invoice">Pay invoice ↗</Link></div>
+    <div className="utility-bar"><p><span>●</span> Family owned · Sumner, WA</p><p>16602 64th St. E. · Sumner, WA</p><a href="tel:+12538632524"><span className="utility-call-label">Call the garage · </span>(253) 863-2524</a><Link className="utility-invoice" href="/pay-invoice">Pay invoice</Link></div>
     <header className="site-header global-header">
       <Link className="brand" href="/" aria-label="Carroll’s Garage home"><Image src="/carrolls-wordmark-transparent.png" width={170} height={62} alt="Carroll’s Garage" priority /></Link>
       <nav aria-label="Primary navigation">{links.map(([href,label])=><Link key={href} href={href} aria-current={current(href)?'page':undefined}>{label}</Link>)}</nav>
       <div className="header-actions">
-        <Link className="book-button" href="/appointment">Book service ↗</Link>
+        <Link className="book-button" href="/appointment">Book service</Link>
         <button className="bag-button" type="button" onClick={open} aria-label={`Open bag with ${count} items`}>Bag <b>{count}</b></button>
         <button className="mobile-menu-toggle" type="button" aria-controls="mobile-navigation" aria-expanded={menuOpen} aria-label="Open navigation menu" onClick={()=>{menu.current?.showModal();setMenuOpen(true);}}><span/><span/></button>
       </div>
@@ -38,9 +38,9 @@ export default function SiteHeader() {
     <dialog ref={menu} id="mobile-navigation" className="mobile-nav-dialog" aria-labelledby="mobile-nav-title" onClose={()=>setMenuOpen(false)} onClick={e=>{if(e.target===e.currentTarget)closeMenu();}}>
       <div className="mobile-nav-inner">
         <div className="mobile-nav-heading"><span id="mobile-nav-title">YOUR NEXT STOP</span><button type="button" autoFocus onClick={closeMenu} aria-label="Close navigation menu">×</button></div>
-        <nav aria-label="Mobile navigation">{[['/','Home'],...links].map(([href,label],i)=><Link key={href} href={href} onClick={closeMenu} aria-current={current(href)?'page':undefined}><small>0{i+1}</small>{label}<span>↗</span></Link>)}</nav>
-        <div className="mobile-nav-secondary">{moreLinks.map(([href,label])=><Link key={href} href={href} onClick={closeMenu} aria-current={current(href)?'page':undefined}>{label} ↗</Link>)}</div>
-        <Link className="shop-primary" href="/appointment" onClick={closeMenu}>Book a service ↗</Link>
+        <nav aria-label="Mobile navigation">{[['/','Home'],...links].map(([href,label],i)=><Link key={href} href={href} onClick={closeMenu} aria-current={current(href)?'page':undefined}><small>0{i+1}</small>{label}</Link>)}</nav>
+        <div className="mobile-nav-secondary">{moreLinks.map(([href,label])=><Link key={href} href={href} onClick={closeMenu} aria-current={current(href)?'page':undefined}>{label}</Link>)}</div>
+        <Link className="shop-primary" href="/appointment" onClick={closeMenu}>Book a service</Link>
         <a className="mobile-nav-phone" href="tel:+12538632524">(253) 863-2524</a>
         <p>16602 64th St. E. · Sumner, WA</p>
       </div>

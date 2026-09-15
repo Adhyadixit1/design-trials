@@ -51,8 +51,8 @@ summary { cursor:pointer; }
 .service-steps details summary::after { content:'+'; font-size:22px; }
 .service-steps details[open] summary::after { content:'−'; }
 @media (hover:hover) {
- .home-gallery-grid button:hover,.store-directory>a:hover,.related-card:hover { translate:0 -3px; }
- .home-gallery-grid button,.store-directory>a,.related-card { transition:translate .2s; }
+ .store-directory>a:hover,.related-card:hover { translate:0 -3px; }
+ .store-directory>a,.related-card { transition:translate .2s; }
 }
 @media(max-width:900px) {
  .mobile-menu-toggle { display:flex; flex-direction:column; justify-content:center; align-items:center; gap:6px; width:46px; height:46px; border:1px solid var(--ink); background:transparent; cursor:pointer; }
@@ -183,9 +183,6 @@ summary { cursor:pointer; }
  .restored-heading { gap:12px; margin-bottom:26px; }
  .restored-heading h2 { margin-bottom:0; }
  .restored-heading>a,.home-restored a>b,.home-warranty a,.home-finance>div>a,.home-areas a { font-size:.875rem; }
- .home-gallery-grid { gap:18px 12px; }
- .home-gallery-grid img { aspect-ratio:1; }
- .home-gallery-grid button>span { font-size:.75rem; padding-block:12px; }
  .home-warranty .warranty-number strong { font-size:clamp(3rem,15vw,5.5rem); }
  .warranty-number span { font-size:1.25rem; }
  .home-finance-options { gap:12px; }

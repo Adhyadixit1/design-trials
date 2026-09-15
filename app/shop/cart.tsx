@@ -61,7 +61,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     <dialog ref={dialog} className="shop-drawer" aria-labelledby="cart-title" onClick={event => { if (event.target === event.currentTarget) dialog.current?.close(); }}>
       <div className="drawer-inner">
         <div className="drawer-heading"><h2 id="cart-title">{checkout ? 'Checkout preview' : 'Your bag'} <span>({count})</span></h2><button autoFocus type="button" aria-label="Close cart" onClick={() => dialog.current?.close()}>×</button></div>
-        {count === 0 ? <div className="cart-empty"><span>GOOD GEAR. NEXT STOP.</span><h3>Your bag is taking a breather.</h3><p>Find something with a little Carroll’s character.</p><Link className="shop-primary" href="/shop" onClick={() => dialog.current?.close()}>Explore the merchandise →</Link></div> : <>
+        {count === 0 ? <div className="cart-empty"><span>GOOD GEAR. NEXT STOP.</span><h3>Your bag is taking a breather.</h3><p>Find something with a little Carroll’s character.</p><Link className="shop-primary" href="/shop" onClick={() => dialog.current?.close()}>Explore the merchandise</Link></div> : <>
           <p className="cart-intro">{checkout ? 'Your selected gear, ready for the next step.' : 'A little piece of the garage. All yours.'}</p>
           <div className="cart-lines">{lines.map((line, index) => {
             const p = catalog.find(p => p.slug === line.slug)!;
@@ -71,7 +71,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
             </article>;
           })}</div>
           <div className="cart-summary"><div><span>Subtotal</span><strong>{money(total)}</strong></div><p>Shipping and taxes are calculated at checkout.</p>
-            {checkout ? <div className="checkout-note" role="status"><b>You’re at the checkout preview.</b><p>Payments aren’t connected in this local design. No order has been placed.</p><button className="shop-secondary" type="button" onClick={() => setCheckout(false)}>Back to your bag</button></div> : <button className="shop-primary" type="button" onClick={() => setCheckout(true)}>Continue to checkout <span>→</span></button>}
+            {checkout ? <div className="checkout-note" role="status"><b>You’re at the checkout preview.</b><p>Payments aren’t connected in this local design. No order has been placed.</p><button className="shop-secondary" type="button" onClick={() => setCheckout(false)}>Back to your bag</button></div> : <button className="shop-primary" type="button" onClick={() => setCheckout(true)}>Continue to checkout</button>}
             <button type="button" className="continue-shopping" onClick={() => dialog.current?.close()}>Continue shopping</button>
           </div>
         </>}
