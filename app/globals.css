@@ -155,9 +155,9 @@ main { width: 100%; overflow: hidden; }
 .section-heading.compact { grid-template-columns: .42fr 1.58fr; }
 .compact h2 em { color: var(--yellow); }
 .process-grid { display: grid; grid-template-columns: repeat(6, 1fr); border-top: 1px solid rgba(255,255,255,.22); border-bottom: 1px solid rgba(255,255,255,.22); }
-.process-grid article { min-height: 290px; display: flex; flex-direction: column; padding: 24px 20px; border-right: 1px solid rgba(255,255,255,.18); }
+.process-grid article { min-height: 0; display: block; padding: 34px 20px 36px; border-right: 1px solid rgba(255,255,255,.18); }
 .process-grid article:last-child { border-right: 0; }
-.process-grid article div { margin-top: auto; }
+.process-grid article div { margin-top: 0; }
 .process-grid h3 { margin: 0 0 10px; font-family: Impact, sans-serif; font-size: clamp(28px, 2.5vw, 42px); text-transform: uppercase; }
 .process-grid p { margin: 0; color: rgba(255,255,255,.5); font-size: 12px; line-height: 1.55; }
 
@@ -217,7 +217,7 @@ footer { display: grid; grid-template-columns: 1.4fr .7fr .55fr .7fr; gap: clamp
   .section-heading { grid-template-columns: .32fr 1.15fr .62fr; }
   .product-grid { grid-template-columns: repeat(3, 1fr); }
   .process-grid { grid-template-columns: repeat(3, 1fr); }
-  .process-grid article { min-height: 220px; border-bottom: 1px solid rgba(255,255,255,.18); }
+  .process-grid article { min-height: 0; border-bottom: 1px solid rgba(255,255,255,.18); }
   .process-grid article:nth-child(3) { border-right: 0; }
   .process-grid article:nth-child(n+4) { border-bottom: 0; }
   .review-section { grid-template-columns: .3fr 1fr; }
@@ -298,7 +298,7 @@ footer { display: grid; grid-template-columns: 1.4fr .7fr .55fr .7fr; gap: clamp
   .photo-label { right: 20px; bottom: 22px; left: 20px; }
   .finance-note { flex-direction: column; }
   .process-grid { grid-template-columns: 1fr 1fr; }
-  .process-grid article { min-height: 190px; }
+  .process-grid article { min-height: 0; }
   .process-grid article:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.18); }
   .process-grid article:nth-child(even) { border-right: 0; }
   .process-grid article:nth-child(-n+4) { border-bottom: 1px solid rgba(255,255,255,.18); }
